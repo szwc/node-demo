@@ -42,7 +42,7 @@ global 最根本的作用是作为全局变量的宿主。按照 ECMAScript 的�
 
 __filename  获取当前正在执行脚本的文件名
 
-——dirname	当前执行脚本的目录
+__dirname	当前执行脚本的目录
 
 process 它用于描述当前Node.js 进程状态的对象，提供了一个与操作系统的简单接口。通常在你写本地命令行程序的时候，少不了要 和它打交道
 ` process.execPath`		//执行路径
