@@ -45,7 +45,7 @@ global 最根本的作用是作为全局变量的宿主。按照 ECMAScript 的�
 
 __filename  获取当前正在执行脚本的文件名
 
-——dirname	当前执行脚本的目录
+___dirname	当前执行脚本的目录
 
 process 它用于描述当前Node.js 进程状态的对象，提供了一个与操作系统的简单接口。通常在你写本地命令行程序的时候，少不了要 和它打交道
 ` process.execPath`		//执行路径
@@ -66,6 +66,7 @@ process 它用于描述当前Node.js 进程状态的对象，提供了一个与�
 `querystring.parse('a=1&b=2')`   将查询字符串解析为一个对象 {a:1,b:2}
 
 `querystring.stringify({foo:'bar',a:1,b:2})`  将对象解析为查询字符串 'foo=bar&a=1&b=2'
+<<<<<<< HEAD
 
 ### path  (提供了一些工具函数，用于处理文件与目录的路径。)
 
@@ -80,3 +81,5 @@ path.extname(path) 		返回一个 path 的扩展名
 
 path.join([...paths]) 		使用平台特定的分隔符把全部给定的 path 片段连接到一起，并规范化生成的路径。
 `path.join('/foo', 'bar', 'baz/asdf', 'quux', '..');  //返回: '/foo/bar/baz/asdf'`
+=======
+>>>>>>> origin/master
