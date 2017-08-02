@@ -81,5 +81,4 @@ path.extname(path) 		返回一个 path 的扩展名
 
 path.join([...paths]) 		使用平台特定的分隔符把全部给定的 path 片段连接到一起，并规范化生成的路径。
 `path.join('/foo', 'bar', 'baz/asdf', 'quux', '..');  //返回: '/foo/bar/baz/asdf'`
-=======
->>>>>>> origin/master
+
