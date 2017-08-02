@@ -32,6 +32,9 @@ Node.js 提供了多种流对象。 例如， HTTP 请求 和 process.stdout 就
 
 ### url模块
 
+`url.parse(req.url[,false[,false]])`  
+url.parse()会解析一个 URL 字符串并返回一个 URL 对象。第二个参数若为true,会降query字符串转换为对象(调用querystring.parse()方法)
+
 ### 全局对象
 
 global 最根本的作用是作为全局变量的宿主。按照 ECMAScript 的定义，满足以下条 件的变量是全局变量：
@@ -63,3 +66,17 @@ process 它用于描述当前Node.js 进程状态的对象，提供了一个与�
 `querystring.parse('a=1&b=2')`   将查询字符串解析为一个对象 {a:1,b:2}
 
 `querystring.stringify({foo:'bar',a:1,b:2})`  将对象解析为查询字符串 'foo=bar&a=1&b=2'
+
+### path  (提供了一些工具函数，用于处理文件与目录的路径。)
+
+常用方法
+`path.basename(str[,ext])`  返回一个 path 的最后一部分
+`path.basename('/foo/bar/baz/asdf/quux.html');`  //quux.html
+`path.basename('/foo/bar/baz/asdf/quux.html','html');`  //quux
+
+path.dirname(path) 		返回一个 path 的目录名
+
+path.extname(path) 		返回一个 path 的扩展名	
+
+path.join([...paths]) 		使用平台特定的分隔符把全部给定的 path 片段连接到一起，并规范化生成的路径。
+`path.join('/foo', 'bar', 'baz/asdf', 'quux', '..');  //返回: '/foo/bar/baz/asdf'`
