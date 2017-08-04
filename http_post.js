@@ -43,7 +43,7 @@ var server = http.createServer(function (req,res) {
 		// res.end(util.inspect(post));
 		res.writeHead(200,{'Content-Type':'text/html;charset=utf8'});
 		if(post.name && post.url){
-			res.write(util.inspect(post));
+			// res.write(util.inspect(post));
 
 			res.write("网站名："+post.name);
 			res.write("<br>");
