@@ -8,5 +8,6 @@ handle["/"]=req_handle.handlefun.root;
 handle["/home"]=req_handle.handlefun.index;
 handle["/movie"]=req_handle.handlefun.movie;
 handle["/post"]=req_handle.handlefun.po;
+handle["/users"]=req_handle.handlefun.users;
 
 server.start(router.router,handle);

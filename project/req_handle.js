@@ -1,6 +1,7 @@
 var fs = require('fs');
 var qs = require('querystring');
-
+var util;
+var mysqldata = require('./mysql');
 // var data;
 		// var readstream = fs.createReadStream('index.html');
 		// readstream.on('data',function (chunk) {
@@ -15,7 +16,7 @@ var handlefun = {
 		res.end();
 	},
 	index:function (req,res) {
-		fs.readFile('index.html',function (err,data) {
+		fs.readFile('views/index.html',function (err,data) {
 			if(err){
 				return console.error(err);
 			}else{
@@ -27,8 +28,16 @@ var handlefun = {
 	},
 	movie:function (req,res) {
 		res.writeHead(200,{"Content-Type":"text/html;charset=utf8"});
-		res.write('这是电影页面');
-		res.end();
+		var a;
+		function cc(p){
+			res.write(JSON.stringify(p));
+			res.end();
+		};
+		mysqldata.getdata(req,res,cc)
+		
+
+		
+		
 	},
 	po:function (req,res) {
 		var postdata;
@@ -50,6 +59,16 @@ var handlefun = {
 
 		})
 
+	},
+	users:function (req,res) {
+		fs.readFile('views/users.html',function (err,data) {
+			if(err){
+				return console.error(err);
+			}else{
+				res.writeHead(200,{"Content-Type":"text/html;charset=utf8"});
+				res.end(data);
+			}
+		})
 	}
 };
 
