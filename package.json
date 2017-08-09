@@ -1,0 +1,47 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Node.js是运行在服务端的JavaScript。Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。\r 注意：\r 1.(事件驱动：javascript就是基于事件驱动的，如在浏览器界面的鼠标点击、移动等事件都可以触发js)\r 2.javascript是单线程的，所以会阻塞，异步是解决这一问题的好方法，所以nodejs 几乎所有方法都是异步的，由事件循环来协调。",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "_core-util-is@1.0.2@core-util-is": "^1.0.2",
+    "_inherits@2.0.3@inherits": "^2.0.3",
+    "_bignumber.js@4.0.2@bignumber.js": "^4.0.2",
+    "_isarray@1.0.0@isarray": "^1.0.0",
+    "_mysql@2.14.1@mysql": "^2.14.1",
+    "_process-nextick-args@1.0.7@process-nextick-args": "^1.0.7",
+    "_readable-stream@2.3.3@readable-stream": "^2.3.3",
+    "_safe-buffer@5.1.1@safe-buffer": "^5.1.1",
+    "_sqlstring@2.2.0@sqlstring": "^2.2.0",
+    "_util-deprecate@1.0.2@util-deprecate": "^1.0.2",
+    "core-util-is": "^1.0.2",
+    "_string_decoder@1.0.3@string_decoder": "^1.0.3",
+    "bignumber.js": "^4.0.2",
+    "inherits": "^2.0.3",
+    "isarray": "^1.0.0",
+    "mysql": "^2.14.1",
+    "process-nextick-args": "^1.0.7",
+    "readable-stream": "^2.3.3",
+    "safe-buffer": "^5.1.1",
+    "sqlstring": "^2.2.0",
+    "string_decoder": "^1.0.3",
+    "util-deprecate": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szwc/node-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szwc/node-demo/issues"
+  },
+  "homepage": "https://github.com/szwc/node-demo#readme"
+}
