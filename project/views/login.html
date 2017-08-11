@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页面</title>
+	<link rel="stylesheet" href="../public/css/basic.css">
+	<link rel="stylesheet" href="../public/css/index.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="login">
+			<form id="login-form">
+				<input type="text" name="username" id="username" placeholder="用户名" autocomplete="on">
+				<input type="password" name="pwd" id="pwd" placeholder="登录密码" autocomplete="on">
+				<div class="login-btn">
+					<span>登录</span>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+	<script src="../public/js/jquery.js"></script>
+	<script>
+		$(function () {
+			
+			var myreg = /^((([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6}\;))*(([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})))$/;
+			$(".login-btn").click(function () {
+				var username = $("#username").val();
+				var pwd = $("#pwd").val();
+				var data={username:username,pwd:pwd};
+				
+				if(username ==""){
+					alert("请输入用户名");
+					return;
+				}
+				if(!myreg.test(username)){
+					alert('请输入正确邮箱格式');
+					return;
+				}
+				if(pwd ==""){
+					alert("请输入密码");
+					return;
+				}
+				$.ajax({
+					url:'http://127.0.0.1:3000/login',
+					data:data,
+					type:"post",
+					success:function (data) {
+						console.log(data);
+					},
+					error:function (err) {
+						console.log(err);
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>
